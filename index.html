@@ -25,7 +25,7 @@
 
       body {
         font-family: "Inter", sans-serif;
-        background-color: var(--bg-light);
+        background-color: var(--card-bg);
         color: var(--text-main);
         line-height: 1.6;
         margin: 0;
@@ -156,12 +156,16 @@
 
       /* Section Styles */
       .phase-section {
-        margin-bottom: 40px;
         background: var(--card-bg);
         border-radius: 12px;
-        padding: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /*
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
         border-top: 4px solid var(--accent-blue);
+        */
       }
 
       .phase-header {
@@ -197,13 +201,13 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 25px;
-        margin-top: 30px;
+        margin-top: 20px;
       }
 
       .artifact-card {
         background: var(--bg-light);
         border: 1px solid var(--border-color);
-        border-radius: 8px;
+        border-radius: 15px;
         padding: 25px;
       }
 
@@ -369,6 +373,7 @@
         </div>
       </div>
 
+      <!--
       <h2 style="text-align: center">
         A Few Documents and Templates to Guide at Each Phase
       </h2>
@@ -384,6 +389,7 @@
         <i class="fas fa-chevron-right step-divider"></i>
         <div class="step"><i class="fas fa-rocket"></i>Transformation</div>
       </div>
+      -->
 
       <div class="phase-section">
         <div class="phase-header">
@@ -409,32 +415,37 @@
             <ul>
               <li>
                 <a href="./mdst-p1-asis-customer-profile.html">
-                  Customer As-Is Profile
-                </a>
+                  <strong>The Legacy System & Data Profile:</strong> </a
+                >An analysis of the customer's current operational state and
+                technical debt.
               </li>
 
               <li>
                 <a href="./mdst-p1-assessment-questionnaire.html">
-                  Assessment Questionnaire
-                </a>
+                  <strong>The Agentic Maturity Assessment:</strong> </a
+                >Evaluating organizational readiness for AI autonomy versus
+                human-in-the-loop validation.
               </li>
 
               <li>
-                <a href="./mdst-p1-commercial-archetype-questionnaire.html">
-                  Commercial Archetype Questionnaire
-                </a>
+                <a href="./mdst-p1-commercial-matrix-questionnaire.html">
+                  <strong>The Commercial Archetype Questionnaire:</strong> </a
+                >Identifying the foundational revenue models (e.g.,
+                Subscription, Usage-Based) required by the business.
               </li>
 
               <li>
                 <a href="./mdst-p1-api-readiness.html">
-                  Agentic API Readiness
-                </a>
+                  <strong>API Readiness Evaluation:</strong> </a
+                >Determining if downstream systems can support headless payload
+                execution (Greenfield vs. Brownfield).
               </li>
 
               <li>
                 <a href="./mdst-p1-intent-mapping.html">
-                  Process to Agent Intent Mapping
-                </a>
+                  <strong>Process-to-Intent Hierarchy (L1-L3):</strong> </a
+                >Translating traditional business processes into the
+                conversational boundaries the agent will operate within.
               </li>
             </ul>
           </div>
@@ -442,15 +453,24 @@
           <div class="artifact-card">
             <h3><i class="fas fa-file-contract"></i> Output Artifacts</h3>
             <ul>
-              <li>Agent-First Commercial Matrix.</li>
               <li>
-                Agent API readyness, Intent Mapping, Process Taxonomy and
-                Catalogue.
+                <strong>The Agentic Intent Taxonomy:</strong> The finalized
+                catalog of approved L1-L3 conversational boundaries and
+                capabilities.
               </li>
               <li>
-                Paper Trail, Spreadsheets, Documentation & Existing Diagrams.
+                <strong>Initial Commercial Matrix (V0):</strong> The baseline
+                draft of the absolute business constraints and legal guardrails.
               </li>
-              <li>Targeted Questionnaires prepared For Discovery.</li>
+              <li>
+                <strong>Legacy Blueprint Archive:</strong> Consolidated paper
+                trails, spreadsheets, and existing system flow diagrams.
+              </li>
+              <li>
+                <strong>Matrix Discovery Agendas:</strong> Targeted,
+                scenario-based questionnaires prepared specifically for Phase 2
+                SME workshops.
+              </li>
             </ul>
           </div>
         </div>
@@ -460,7 +480,7 @@
         <div class="phase-header">
           <h2>
             <i class="fas fa-microscope"></i>
-            Discovery, Base Reality & Agentic Path
+            Matrix Discovery & Base Reality
           </h2>
           <p class="phase-desc">
             Traditionally, Discovery is about watching business users use a
@@ -474,47 +494,49 @@
 
         <div class="card-grid">
           <div class="artifact-card">
-            <h3><i class="fas fa-comments"></i> Discovery Execution</h3>
+            <h3><i class="fas fa-comments"></i>Inputs</h3>
 
-            <h4>Workshops</h4>
             <ul>
               <li>
-                <a href="./mdst-p2-sme-workshops.html"> SME Workshops </a>
+                <a href="./mdst-p2-archetype-library.html">
+                  <strong>Commercial Archetype Library: </strong></a
+                >A standardized repository of headless transaction blueprints
+                that tells the AI agent exactly how to structure JSON data
+                payloads from natural language intent.
               </li>
 
               <li>
-                <a href="./mdst-p2-discovery.html"> A Day in Life Discovery </a>
-              </li>
-            </ul>
-
-            <h4 style="padding-top: 10px">Business Processes</h4>
-            <ul>
-              <li>
-                <a href="./mdst-p2-variant-details.html">
-                  Customer Variations in Detail
-                </a>
-              </li>
-              <li>
-                <a href="./mdst-p2-business-process.html">
-                  RLM Business Processes High Level
-                </a>
-              </li>
-              <li>
-                <a href="./mdst-p3-process-flows.html">
-                  RLM Business Process Details and Flow Diagrams
-                </a>
+                <a href="./mdst-p2-matrix-discovery.html">
+                  <strong>Matrix Discovery: </strong></a
+                >The investigative methodology used to extract deterministic
+                business rules from human experts to hardcode the AI's
+                operational boundaries and constraints.
               </li>
             </ul>
           </div>
+
           <div class="artifact-card">
             <h3><i class="fas fa-clipboard-check"></i> Output Artifacts</h3>
             <ul>
               <li>
-                Requirements Traceability Matrix (RTM) Filled With Gap Summary
-                (L4)
+                <strong>The Matrix & Archetype Blueprint (V1):</strong> The
+                comprehensive documentation of all AI execution pathways and
+                deterministic business constraints.
               </li>
-              <li>Executive Readout</li>
-              <li>Business Requirements Documentation (BRD) V1</li>
+              <li>
+                <strong
+                  >The Traceability Ledger (L4 Payload & Gap Summary):</strong
+                >
+                The governance map highlighting system deficits and data risks
+                preventing headless API execution.
+              </li>
+              <li>
+                <strong
+                  >Executive Readout (Agentic Readiness & Governance):</strong
+                >
+                The strategic presentation confirming the AI's operational
+                boundaries, data readiness, and integration risks.
+              </li>
             </ul>
           </div>
         </div>
@@ -523,83 +545,80 @@
       <div class="phase-section">
         <div class="phase-header">
           <h2>
-            <i class="fas fa-compass"></i>
-            Architecting the Commercial Archetypes
+            <i class="fas fa-cubes"></i>
+            Architecting the Commercial Archetypes (Execution)
           </h2>
-          <p class="phase-desc">
-            Having mapped the precise business intent and categorized the
-            deficits across Process, System, and Data, the diagnostic phase
-            concludes. We now pivot from business analysis to structural design,
-            translating the identified gaps into a concrete architectural
-            blueprint.
+          <p>
+            We pivot from business analysis to structural design. We wire the
+            approved blueprints into the Agentforce reasoning engine, replacing
+            rigid UI click-paths with seamless OmniStudio API integrations.
           </p>
 
-          <div class="note-box">
-            <strong>A Note on the Design Phase:</strong> Unlike the highly
-            structured templates of the Discovery phases, the Solution Design
-            phase is intentionally fluid. This is a dynamic, collaborative stage
-            where the technical team transitions from analyzing business gaps to
-            actively brainstorming structural solutions. Rather than relying on
-            rigid, pre-filled documents, the artifacts in this phase evolve
-            organically out of architecture design meetings as the team
-            engineers the optimal data and integration blueprints.
-          </div>
-        </div>
+          <div class="card-grid">
+            <div class="artifact-card">
+              <h3><i class="fas fa-cogs"></i>Inputs</h3>
+              <ul>
+                <li>
+                  <a href="./mdst-p3-technical-playbook.html">
+                    <strong>Technical Playbook:</strong> </a
+                  >The engineering guide for translating structural blueprints
+                  into functional Agentforce capabilities by wiring them through
+                  headless OmniStudio API integrations.
+                </li>
 
-        <div class="card-grid">
-          <div class="artifact-card">
-            <h3><i class="fas fa-cogs"></i> Engineering Steps</h3>
-            <ul>
-              <li>Architture Teaam Design Meetings</li>
-              <li>
-                <a href="./mdst-p3-work-distribution.html">
-                  Work Distribution and and Development Handoff
-                </a>
-              </li>
-            </ul>
-            <h3 style="margin-top: 20px">
-              <i class="fas fa-book"></i> Technical Playbooks
-            </h3>
-            <ul>
-              <li>
-                <a href="./mdst-p4-rca-object-variables.html">
-                  RCA Object Variables
-                </a>
-              </li>
-              <li>
-                <a href="./mdst-p4-rlm-in-ifloop.html">
-                  If RLM To Be an If-Else-Loop
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <a href="./mdst-p3-traceability-ledger.html">
+                    <strong>Traceability Ledger:</strong> </a
+                  >A strict, 12-phase compliance framework that audits a
+                  transaction from the initial conversational prompt down to the
+                  downstream financial ledger to eliminate AI hallucination.
+                </li>
+              </ul>
+            </div>
 
-            <ul>
-              <li>
-                <a href="./mdst-p4-dev-what-is-omni.html">What is Omni</a>
-              </li>
-              <li>
-                <a href="./mdst-p4-dev-agentic-datacloud.html"
-                  >Agentic AI & Data Cloud Integration</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="artifact-card">
-            <h3><i class="fas fa-layer-group"></i> Output Artifacts</h3>
-            <ul>
-              <li>Finalized Solution Design</li>
-              <li>User Stories (L5)</li>
-              <li>Success Criteria (L6) mapped to RTM</li>
-            </ul>
+            <div class="artifact-card">
+              <h3><i class="fas fa-layer-group"></i> Output Artifacts</h3>
+              <ul>
+                <li>
+                  <strong>The Headless Orchestration Design:</strong> The
+                  finalized technical architecture detailing OmniStudio IPs,
+                  Agent Actions, and Data Cloud grounding mechanisms.
+                </li>
+                <li>
+                  <strong>Payload Execution Stories (L5):</strong> Jira-ready
+                  narratives defining exactly how the LLM must construct,
+                  format, and route specific JSON payloads.
+                </li>
+                <li>
+                  <strong>Guardrail Verification Criteria (L6):</strong> The
+                  strict Definition of Done, mapped directly to the Traceability
+                  Ledger, proving the agent executes without hallucination.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="resources">
-        <a href="./mdst-p0-three-edge-cases.html"
-          ><i class="fas fa-link"></i> Stress-Testing the Framework: Three Edge
-          Cases</a
-        >
+      <div class="phase-section" style="padding-top: 0px; padding-bottom: 40px">
+        <div class="card-grid">
+          <div class="artifact-card">
+            <ul>
+              <li>
+                <a href="./framework-glossary.html">
+                  <strong>Framework Glossary:</strong></a
+                >
+                A standardized terminology of the agent-first framework.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="artifact-card"
+            style="background: var(--card-bg); border: 0"
+          >
+            <strong></strong>
+          </div>
+        </div>
       </div>
     </div>
   </body>
