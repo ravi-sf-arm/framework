@@ -295,6 +295,42 @@
   </div>
 </section>
 
+  <script>
+  const salesCheckboxes = document.querySelectorAll('input[name="salesModel"]');
+
+  function updateSections() {
+    const allModels = ['oneTime', 'subscription', 'usage', 'milestone'];
+    
+    // Hide all sections first
+    allModels.forEach(model => {
+      const sections = document.querySelectorAll(
+        `#fulfillment-${model}, #revenue-${model}, #change-${model}`
+      );
+      sections.forEach(sec => sec.style.display = 'none');
+    });
+
+    // Show sections for the currently checked radio button
+    salesCheckboxes.forEach(cbInner => {
+      if (cbInner.checked) {
+        const model = cbInner.value;
+        const sections = document.querySelectorAll(
+          `#fulfillment-${model}, #revenue-${model}, #change-${model}`
+        );
+        sections.forEach(sec => sec.style.display = 'block');
+      }
+    });
+  }
+
+  // Attach event listener for future user clicks
+  salesCheckboxes.forEach(cb => {
+    cb.addEventListener('change', updateSections);
+  });
+
+  // ADDED HERE: Run once right now so the default checked item displays immediately
+  updateSections();
+</script>
+
+<!-- 
 <script>
   const salesCheckboxes = document.querySelectorAll('input[name="salesModel"]');
   salesCheckboxes.forEach(cb => {
@@ -318,6 +354,6 @@
     });
   });
 </script>
-
+-->
 </body>
 </html>
